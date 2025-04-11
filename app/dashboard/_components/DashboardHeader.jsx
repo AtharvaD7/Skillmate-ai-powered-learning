@@ -11,19 +11,19 @@ function DashboardHeader({ showLogo = true }) {
 
   const isDashboardPage = pathname === "/dashboard";
   const isPageJs = pathname === "/dashboard/page";
+  const hideBackAndLogo = ["/dashboard/upgrade", "/dashboard/profile"].includes(pathname);
 
   const [hoveredIcon, setHoveredIcon] = useState(null);
   const [tooltipVisible, setTooltipVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Sample data to search (Replace with API or database data)
   const data = ["React", "Next.js", "JavaScript", "Node.js", "TailwindCSS", "Clerk Auth"];
 
   const handleSearch = () => {
     const filteredResults = data.filter((item) =>
       item.toLowerCase().includes(searchQuery.toLowerCase())
     );
-    console.log("Filtered Results:", filteredResults); // For now, logging the results
+    console.log("Filtered Results:", filteredResults);
   };
 
   let timeout;
@@ -42,9 +42,9 @@ function DashboardHeader({ showLogo = true }) {
 
   return (
     <div className="p-5 shadow-md flex items-center justify-between relative">
-      {/* Left Section: Back Icon, Search Bar */}
+      {/* Left Section */}
       <div className="flex gap-4 items-center">
-        {!isDashboardPage && !isPageJs && (
+        {!isDashboardPage && !isPageJs && !hideBackAndLogo && (
           <div
             onMouseEnter={() => handleMouseEnter("Back")}
             onMouseLeave={handleMouseLeave}
@@ -62,7 +62,7 @@ function DashboardHeader({ showLogo = true }) {
           </div>
         )}
 
-        {/* Search Bar (Visible only on Dashboard) */}
+        {/* Search Bar */}
         {isDashboardPage && (
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
@@ -77,7 +77,8 @@ function DashboardHeader({ showLogo = true }) {
           </div>
         )}
 
-        {showLogo && !isDashboardPage && (
+        {/* Logo */}
+        {showLogo && !isDashboardPage && !hideBackAndLogo && (
           <div className="flex items-center gap-2">
             <Image src="/cleanlogo.svg" alt="logo" width={40} height={40} />
             <h2 className="font-bold text-2xl">SkillMate</h2>
@@ -85,7 +86,7 @@ function DashboardHeader({ showLogo = true }) {
         )}
       </div>
 
-      {/* Right Section: Home or Dashboard Icon + User Button */}
+      {/* Right Section */}
       <div className="flex items-center gap-4">
         {isDashboardPage ? (
           <div
