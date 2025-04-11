@@ -167,7 +167,8 @@ const ChatbotItem = () => {
       </div>
 
       <div className="fixed bottom-0 left-0 w-full bg-white shadow-md p-3 flex items-center justify-center">
-        <div className="flex items-center space-x-3 w-[45%]">
+      <div className="flex items-center space-x-3 w-full max-w-2xl px-2 sm:px-4">
+
           <button
             onClick={clearChat}
             className="text-gray-600 hover:text-gray-900 relative group"
@@ -181,7 +182,7 @@ const ChatbotItem = () => {
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyDown={handleKeyPress}
-            className="p-3 bg-transparent text-black border border-gray-300 rounded-full focus:outline-none w-full text-left resize-none"
+            className="p-3 bg-white text-black border border-gray-300 rounded-full focus:outline-none w-full text-left resize-none placeholder:text-sm sm:placeholder:text-base"
             placeholder="Type a message..."
             rows={1}
           />
