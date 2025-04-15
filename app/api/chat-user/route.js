@@ -12,7 +12,7 @@ export async function POST(req) {
 
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-    // 🧠 Properly structured chat history with "parts" using { text }
+    // Context aware
     const chat = model.startChat({
       history: [
         {
