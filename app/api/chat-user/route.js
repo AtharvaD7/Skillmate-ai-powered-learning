@@ -3,6 +3,9 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
 
+export const runtime = 'edge';
+
+
 export async function POST(req) {
   try {
     const { message } = await req.json();
