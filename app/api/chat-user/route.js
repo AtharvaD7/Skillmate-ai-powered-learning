@@ -7,20 +7,40 @@ export async function POST(req) {
   try {
     const { message } = await req.json();
 
-    // Get the model
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-    // Generate response from AI
-    const result = await model.generateContent(message);
+    // 🧠 Properly structured chat history with "parts" using { text }
+    const chat = model.startChat({
+      history: [
+        {
+          role: "user",
+          parts: [
+            { text: "You are a helpful and knowledgeable AI assistant. Always provide clear, structured, and detailed answers, especially for technical terms like OOP, HTTP, Java, etc." },
+          ],
+        },
+        {
+          role: "model",
+          parts: [
+            { text: "Sure! I'm ready to help with any technical or general topic." },
+          ],
+        },
+      ],
+    });
+
+    // Send user message
+    const result = await chat.sendMessage(message);
     const response = await result.response;
-    const botResponse = response.text(); // Gemini AI usually returns formatted markdown or HTML
+    const botResponse = response.text();
+
+    console.log("🔍 User message:", message);
+    console.log("🤖 Gemini response:", botResponse);
 
     return NextResponse.json({
       role: "bot",
-      text: botResponse, // Ensure it's a well-structured response
+      text: botResponse,
     });
   } catch (error) {
-    console.error("Error fetching AI response:", error);
+    console.error("❌ Error fetching AI response:", error);
     return NextResponse.json(
       { error: "Something went wrong!" },
       { status: 500 }
