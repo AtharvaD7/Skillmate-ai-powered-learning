@@ -1,7 +1,3 @@
-Absolutely! Here's a polished and visually appealing `README.md` version of your content, formatted like your example with emojis, sections, and improved clarity:
-
----
-
 # 📚 AI Study Material Generator
 
 Welcome to **AI Study Material Generator** – a modern SaaS platform that leverages advanced AI to create personalized study materials. Whether you're a student, teacher, or lifelong learner, this app helps simplify your study process with smart summaries, flashcards, quizzes, and more – all generated in seconds.
