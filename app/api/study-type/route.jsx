@@ -16,11 +16,7 @@ export async function POST(req) {
         const contentList=await db.select().from(STUDY_TYPE_CONTENT_TABLE).where(eq(STUDY_TYPE_CONTENT_TABLE?.courseId,courseId));
 
         const result={
-<<<<<<< HEAD
-            notes:contentList?.filter(item=>item.type=='Ntoes'),
-=======
             notes:contentList?.filter(item=>item.type=='Notes'),
->>>>>>> cce8211 (Notes Update)
             flashcard:contentList?.filter(item=>item.type=='Flashcard'),
             quiz:contentList?.filter(item=>item.type=='Quiz'),
             qa:contentList?.filter(item=>item.type=='QA'),
