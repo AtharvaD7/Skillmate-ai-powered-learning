@@ -55,6 +55,7 @@ export const GenerateNotes=inngest.createFunction(
     const {course}=event.data; //all record info
 
     // gen notes for each chapter with ai
+    console.log("🧠 [Inngest] notes.generate event received", event.data);
     const notesResult=await step.run('Generate Chapter Notes',async()=>{
       const Chapters=course?.courseLayout?.chapters;
       let index=0;
