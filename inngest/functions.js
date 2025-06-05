@@ -58,7 +58,9 @@ export const GenerateNotes=inngest.createFunction(
     const notesResult=await step.run('Generate Chapter Notes',async()=>{
       const Chapters=course?.courseLayout?.chapters;
       let index=0;
-      Chapters.forEach(async(chapter) => {
+      for (let index = 0; index < Chapters.length; index++) {
+        const chapter = Chapters[index];
+
         const PROMPT='Generate exam material detail content for each chapter , Make sure to includes all topic point in the content, make sure to give content in HTML format (Do not Add HTML , Head, Body, title tag), The chapters :'+JSON.stringify(chapter);
 
         const result=await generateNotesAiModel.sendMessage(PROMPT);
@@ -71,8 +73,8 @@ export const GenerateNotes=inngest.createFunction(
           notes:aiResp
 
         })
-        index=index+1;
-      })
+        
+      }
       return 'Completed'
     })
 
