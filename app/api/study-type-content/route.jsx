@@ -29,7 +29,7 @@ export async function POST(req) {
 
 
     //trigger inngest function
-    inngest.send({
+    await inngest.send({
         name:'studyType.content',
         data:{
             studyType:type,
