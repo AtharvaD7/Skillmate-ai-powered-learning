@@ -37,7 +37,7 @@ function MaterialCardItem({ item, studyTypeContent, course, refreshData }) {
     });
 
     try {
-      await axios.post('/api/study-type-content', {
+      await axios.post('/api/study-type', {
         courseId: course?.courseId,
         type: item.name,
         chapters: chapters,
