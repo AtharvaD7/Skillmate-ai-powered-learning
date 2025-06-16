@@ -181,7 +181,7 @@ Atharva Deshmukh
 
 ### 📝 Notes 
 
-![Screenshot 2025-06-16 201247](https://github.com/user-attachments/assets/d6dc2422-01ac-4cf3-a03e-655f00cc234d)
+![image](https://github.com/user-attachments/assets/340aa683-b2dc-42e4-9f2c-2ae5b4017e11)
 ---
 
 ### ❓ Quiz
