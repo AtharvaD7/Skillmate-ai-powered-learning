@@ -10,7 +10,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 export const NEXT_PUBLIC_GEMINI_API_KEY = "/api/chat-user";
 
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash",
+  model: "gemini-2.0-flash-lite",
 });
 
 const generationConfig = {
