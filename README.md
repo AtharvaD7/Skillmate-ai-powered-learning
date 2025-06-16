@@ -161,4 +161,42 @@ Atharva Deshmukh
 💻 GitHub: https://github.com/AtharvaD7
 
 ---
-![image](https://github.com/user-attachments/assets/ea50e515-1095-4ecd-93dc-37e4d159a526)
+## ✨ UI Demo
+
+## 🏠 Home Page 
+
+![Screenshot 2025-06-16 201131](https://github.com/user-attachments/assets/9bff6bf7-547a-4074-84d0-783ff99b5418)
+---
+
+## 📊 Dashboard
+
+![Screenshot 2025-06-16 201145](https://github.com/user-attachments/assets/fb2597e6-49ef-4c95-a66d-9387ed797c2e)
+---
+
+## 📋 Course Content Page
+
+![Screenshot 2025-06-16 201434](https://github.com/user-attachments/assets/245a7cb9-1aa5-4764-a2c3-8ebe0fa87632)
+---
+
+## 📝 Notes 
+
+![Screenshot 2025-06-16 201247](https://github.com/user-attachments/assets/d6dc2422-01ac-4cf3-a03e-655f00cc234d)
+---
+
+## ❓ Quiz
+
+![Screenshot 2025-06-16 201315](https://github.com/user-attachments/assets/20eba7a2-b70c-452d-9cfc-434fdad09ead)
+---
+
+## 💬 Chatbot
+
+![Screenshot 2025-06-16 201358](https://github.com/user-attachments/assets/e8701a2b-5eff-4be0-a321-d71e46d7192a)
+---
+
+
+
+
+
+
+
+
