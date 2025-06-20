@@ -11,7 +11,7 @@ function CourseIntroCard({ course }) {
     const data = JSON.parse(localStorage.getItem(key)) || {};
     let count = 0;
     if (data.view) count += 25;
-    if (data.flashcard) count += 25;
+    if (data.flashcards) count += 25;
     if (data.quiz) count += 25;
     if (data.ai) count += 25;
     setProgress(count);

@@ -7,7 +7,7 @@ export async function POST(req) {
     const {chapters,courseId,type}=await req.json();
 
     // ✅ Block types not meant to go into STUDY_TYPE_CONTENT_TABLE
-      const allowedTypes = ['Flashcard', 'Quiz'];
+      const allowedTypes = ['', 'Quiz'];
       if (!allowedTypes.includes(type)) {
         return NextResponse.json(
           { error: `Type "${type}" is not allowed here.` },
@@ -15,8 +15,8 @@ export async function POST(req) {
         );
       }
 
-    const PROMPT=type==='Flashcard'
-    ? 'Generate the flashcard on topic : '+chapters+' JSON format with front back content, Maximum 15' 
+    const PROMPT=type===''
+    ? 'Generate the  on topic : '+chapters+' JSON format with front back content, Maximum 15' 
     : 'Generate Quiz on topic : '+chapters+' with Question and Options along with correct answer in JSON format, Max 10';
 
 

@@ -17,7 +17,7 @@ export async function POST(req) {
 
         const result={
             notes:notes,
-            flashcard:contentList?.filter(item=>item.type=='Flashcard'),
+            flashcards:contentList?.filter(item=>item.type=='Flashcard'),
             quiz:contentList?.filter(item=>item.type=='Quiz'),
             qa:contentList?.filter(item=>item.type=='QA'),
 

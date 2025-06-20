@@ -20,7 +20,7 @@ function Upgrade() {
       price: "9.99$",
       features: [
         "Unlimited course generation",
-        "Unlimited flashcards & quizzes",
+        "Unlimited s & quizzes",
         "Priority email support",
         "Full access to help center",
       ],

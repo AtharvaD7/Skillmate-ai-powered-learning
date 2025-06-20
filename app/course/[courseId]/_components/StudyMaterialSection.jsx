@@ -21,7 +21,7 @@ function StudyMaterialSection({courseId,course}) {
         desc:'Flashcard helps to remember the concepts',
         icon:'/flashcard.png',
         path:'/flashcards',
-        type:'flashcard'
+        type:'flashcards'
        },
        {
         name:'Quiz',
