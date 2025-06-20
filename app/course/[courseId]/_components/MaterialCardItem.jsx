@@ -48,7 +48,7 @@ function MaterialCardItem({ item, studyTypeContent, course, refreshData }) {
       setTimeout(refreshData, 1000);
 
       // ✅ Store flashcard, quiz or notes progress
-      if (item.name === 'Flashcard') updateProgress('flashcard');
+      if (item.name === 'Flashcard') updateProgress('flashcards');
       if (item.name === 'Quiz') updateProgress('quiz');
       if (item.name === 'Notes') updateProgress('notes');
 
