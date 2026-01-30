@@ -74,48 +74,6 @@ Ensure you have these tools and services set up:
 
 ---
 
-### ⚙️ Installation
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/YourUsername/AI-Study-Material-Generator.git
-   cd AI-Study-Material-Generator
-   ```
-
-2. **Install Dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables**
-
-   Create a `.env.local` file in the root and add:
-
-   ```env
-   NEXT_CLERK_FRONTEND_API=your_clerk_frontend_api
-   CLERK_API_KEY=your_clerk_api_key
-   STRIPE_SECRET_KEY=your_stripe_secret_key
-   NEON_DATABASE_URL=your_neon_database_url
-   INNGEST_API_KEY=your_inngest_api_key
-   OPENAI_API_KEY=your_openai_api_key
-   ```
-
-4. **Run the App**
-
-   ```bash
-   npm run dev
-   ```
-
-5. **Build for Production**
-
-   ```bash
-   npm run build
-   ```
-
----
-
 ## 📚 Usage
 
 - 🔐 **Sign In**: Use Clerk to create or log in to your account
@@ -124,35 +82,6 @@ Ensure you have these tools and services set up:
 - 🔁 **Real-Time Actions**: Enjoy instant updates via Inngest workflows
 
 ---
-
-## 🤝 Contributing
-
-We welcome contributions! To contribute:
-
-1. **Fork the Repository**
-
-   ```bash
-   git checkout -b feature/YourFeatureName
-   ```
-
-2. **Commit Changes**
-
-   ```bash
-   git commit -m "Add: Your Feature Description"
-   ```
-
-3. **Push to Branch**
-
-   ```bash
-   git push origin feature/YourFeatureName
-   ```
-
-4. **Create a Pull Request**
-
-   Open a PR describing your changes. We’ll review it ASAP.
-
----
-
 
 ## 📞 Contact
 
