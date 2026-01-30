@@ -38,8 +38,6 @@ Powered by **Gemini AI**, this app dynamically creates quizzes, summaries, and f
 
 - 🤖 **AI-Powered Content**: Generate quizzes, flashcards, and summaries with Gemini AI
 - 🔐 **Clerk Authentication**: Secure and easy user management
-- ⚙️ **Serverless Backend**: Inngest-powered background tasks and workflows
-- 💳 **Stripe Integration**: Handle subscriptions and payments
 - 🎨 **Beautiful UI**: Responsive design with Tailwind CSS
 - ⚡ **Next.js SSR & API Routes**: Fast, SEO-friendly pages and powerful backend
 
@@ -54,8 +52,6 @@ Powered by **Gemini AI**, this app dynamically creates quizzes, summaries, and f
 | Database       | Neon (PostgreSQL)                           |
 | AI Integration | Gemini AI                                   |
 | Auth           | Clerk                                       |
-| Payments       | Stripe                                      |
-| Serverless     | Inngest                                     |
 
 ---
 
