@@ -158,7 +158,7 @@ We welcome contributions! To contribute:
 ## 📞 Contact
 
 Atharva Deshmukh  
-📧 Email: atharvad1775@gmail.com 
+📧 Email: datharva706@gmail.com 
 💻 GitHub: https://github.com/AtharvaD7
 
 ---
