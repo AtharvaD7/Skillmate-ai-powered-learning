@@ -4,10 +4,10 @@ const {
   HarmBlockThreshold,
 } = require("@google/generative-ai");
 
-const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
-export const NEXT_PUBLIC_GEMINI_API_KEY = "/api/chat-user";
+export const GEMINI_API_KEY = "/api/chat-user";
 
 const model = genAI.getGenerativeModel({
   model: "gemini-2.0-flash-lite",
@@ -29,7 +29,7 @@ const generationConfig2 = {
   responseMimeType: "text/html",
 };
 
-    //
+//
 export const courseOutlineAIModel = model.startChat({
   generationConfig,
   history: [
@@ -48,7 +48,7 @@ export const courseOutlineAIModel = model.startChat({
   ],
 });
 
-    //notes
+//notes
 export const generateNotesAiModel = model.startChat({
   generationConfig2,
   history: [
@@ -68,8 +68,8 @@ export const generateNotesAiModel = model.startChat({
         },
       ],
     },
-    
-    
+
+
   ],
 });
 
@@ -79,13 +79,13 @@ export const GenerateStudyTypeContentAiModel = model.startChat({
     {
       role: "user",
       parts: [
-        {text: "Generate the flashcard on topic : Flutter Fundamentals,User Interface (UI) Development,Basic App Navigation in JSON format with front back content, Maximum 15\n"},
+        { text: "Generate the flashcard on topic : Flutter Fundamentals,User Interface (UI) Development,Basic App Navigation in JSON format with front back content, Maximum 15\n" },
       ],
     },
     {
       role: "model",
       parts: [
-        {text: "```json\n[\n  {\n    \"front\": \"What is Flutter?\",\n    \"back\": \"Flutter is a UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.\"\n  },\n  {\n    \"front\": \"What is a Widget in Flutter?\",\n    \"back\": \"A Widget describes the configuration for an Element. It's the basic building block of Flutter's UI. Everything is a Widget!\"\n  },\n  {\n    \"front\": \"What are the two main types of Widgets?\",\n    \"back\": \"StatefulWidget and StatelessWidget.\"\n  },\n  {\n    \"front\": \"What is a StatelessWidget?\",\n    \"back\": \"A Widget that does not have any mutable state. Its properties cannot change over time.\"\n  },\n  {\n    \"front\": \"What is a StatefulWidget?\",\n    \"back\": \"A Widget that has mutable state. Its properties can change over time, causing the UI to rebuild.\"\n  },\n  {\n    \"front\": \"What is the purpose of the `build` method in a Widget?\",\n    \"back\": \"The `build` method is responsible for describing the part of the user interface represented by this widget.\"\n  },\n  {\n    \"front\": \"What is the `initState` method used for in a StatefulWidget?\",\n    \"back\": \"The `initState` method is called only once when the StatefulWidget is first created. It's used for initialization tasks.\"\n  },\n  {\n    \"front\": \"What is the `setState()` method used for?\",\n    \"back\": \"The `setState()` method is used to notify the framework that the internal state of a StatefulWidget has changed, triggering a rebuild of the UI.\"\n  },\n  {\n    \"front\": \"What is the purpose of the `Scaffold` Widget?\",\n    \"back\": \"The `Scaffold` widget provides basic layout structures for a typical app screen, including an `AppBar`, `Body`, `Drawer`, and `BottomNavigationBar`.\"\n  },\n  {\n    \"front\": \"What is the role of a `Container` Widget?\",\n    \"back\": \"The `Container` Widget allows you to apply padding, margins, borders, background colors, and other visual effects to its child widget.\"\n  },\n  {\n    \"front\": \"What is `MaterialApp`?\",\n    \"back\": \"`MaterialApp` is a convenience widget that wraps a number of widgets that are commonly required for applications implementing Material Design.\"\n  }\n]\n```"},
+        { text: "```json\n[\n  {\n    \"front\": \"What is Flutter?\",\n    \"back\": \"Flutter is a UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.\"\n  },\n  {\n    \"front\": \"What is a Widget in Flutter?\",\n    \"back\": \"A Widget describes the configuration for an Element. It's the basic building block of Flutter's UI. Everything is a Widget!\"\n  },\n  {\n    \"front\": \"What are the two main types of Widgets?\",\n    \"back\": \"StatefulWidget and StatelessWidget.\"\n  },\n  {\n    \"front\": \"What is a StatelessWidget?\",\n    \"back\": \"A Widget that does not have any mutable state. Its properties cannot change over time.\"\n  },\n  {\n    \"front\": \"What is a StatefulWidget?\",\n    \"back\": \"A Widget that has mutable state. Its properties can change over time, causing the UI to rebuild.\"\n  },\n  {\n    \"front\": \"What is the purpose of the `build` method in a Widget?\",\n    \"back\": \"The `build` method is responsible for describing the part of the user interface represented by this widget.\"\n  },\n  {\n    \"front\": \"What is the `initState` method used for in a StatefulWidget?\",\n    \"back\": \"The `initState` method is called only once when the StatefulWidget is first created. It's used for initialization tasks.\"\n  },\n  {\n    \"front\": \"What is the `setState()` method used for?\",\n    \"back\": \"The `setState()` method is used to notify the framework that the internal state of a StatefulWidget has changed, triggering a rebuild of the UI.\"\n  },\n  {\n    \"front\": \"What is the purpose of the `Scaffold` Widget?\",\n    \"back\": \"The `Scaffold` widget provides basic layout structures for a typical app screen, including an `AppBar`, `Body`, `Drawer`, and `BottomNavigationBar`.\"\n  },\n  {\n    \"front\": \"What is the role of a `Container` Widget?\",\n    \"back\": \"The `Container` Widget allows you to apply padding, margins, borders, background colors, and other visual effects to its child widget.\"\n  },\n  {\n    \"front\": \"What is `MaterialApp`?\",\n    \"back\": \"`MaterialApp` is a convenience widget that wraps a number of widgets that are commonly required for applications implementing Material Design.\"\n  }\n]\n```" },
       ],
     },
   ],
@@ -97,13 +97,13 @@ export const GenerateQuizAiModel = model.startChat({
     {
       role: "user",
       parts: [
-        {text: "Generate Quiz on topic: Introduction to Java, Data Types, Variables, and Operators, Control Flow, Arrays, Strings, Object-Oriented Programming (OOP) Basics, Methods, Basic Input/Output with Question and Options along with correct answer in JSON format, (Max 10)"},
+        { text: "Generate Quiz on topic: Introduction to Java, Data Types, Variables, and Operators, Control Flow, Arrays, Strings, Object-Oriented Programming (OOP) Basics, Methods, Basic Input/Output with Question and Options along with correct answer in JSON format, (Max 10)" },
       ],
     },
     {
       role: "model",
       parts: [
-        {text: "```json\n{\n  \"questions\": [\n    {\n      \"question\": \"Which of the following is NOT a primitive data type in Java?\",\n      \"options\": [\n        \"int\",\n        \"boolean\",\n        \"String\",\n        \"float\"\n      ],\n      \"correctAnswer\": \"String\"\n    },\n    {\n      \"question\": \"What is the purpose of the 'if' statement in Java?\",\n      \"options\": [\n        \"To repeat a block of code\",\n        \"To define a class\",\n        \"To execute a block of code based on a condition\",\n        \"To declare a variable\"\n      ],\n      \"correctAnswer\": \"To execute a block of code based on a condition\"\n    },\n    {\n      \"question\": \"Which of the following operators is used for assignment in Java?\",\n      \"options\": [\n        \"==\",\n        \"=\",\n        \"+\",\n        \"%\"\n      ],\n      \"correctAnswer\": \"=\"\n    },\n    {\n      \"question\": \"What is the index of the first element in an array in Java?\",\n      \"options\": [\n        \"1\",\n        \"0\",\n        \"-1\",\n        \"The array's length\"\n      ],\n      \"correctAnswer\": \"0\"\n    },\n    {\n      \"question\": \"Which keyword is used to define a class in Java?\",\n      \"options\": [\n        \"public\",\n        \"class\",\n        \"static\",\n        \"void\"\n      ],\n      \"correctAnswer\": \"class\"\n    },\n    {\n      \"question\": \"What is encapsulation in OOP?\",\n      \"options\": [\n        \"Hiding data and methods within a class\",\n        \"Creating multiple objects from the same class\",\n        \"Inheriting properties from another class\",\n        \"Breaking down a problem into smaller parts\"\n      ],\n      \"correctAnswer\": \"Hiding data and methods within a class\"\n    },\n    {\n      \"question\": \"What is the purpose of the 'main' method in a Java program?\",\n      \"options\": [\n        \"To declare variables\",\n        \"To define a class\",\n        \"To start the execution of the program\",\n        \"To print output to the console\"\n      ],\n      \"correctAnswer\": \"To start the execution of the program\"\n    },\n    {\n      \"question\": \"Which of the following methods is used to read input from the console in Java?\",\n      \"options\": [\n        \"System.out.println()\",\n        \"System.in.read()\",\n        \"Scanner.nextLine()\",\n        \"print()\"\n      ],\n      \"correctAnswer\": \"Scanner.nextLine()\"\n    },\n    {\n      \"question\": \"Which loop is guaranteed to execute at least once?\",\n      \"options\": [\n        \"for loop\",\n        \"while loop\",\n        \"do-while loop\",\n        \"if-else loop\"\n      ],\n      \"correctAnswer\": \"do-while loop\"\n    },\n    {\n      \"question\": \"What does the 'new' keyword do in Java?\",\n      \"options\": [\n        \"Declares a variable\",\n        \"Creates a new object\",\n        \"Defines a class\",\n        \"Calls a method\"\n      ],\n      \"correctAnswer\": \"Creates a new object\"\n    }\n  ]\n}\n```"},
+        { text: "```json\n{\n  \"questions\": [\n    {\n      \"question\": \"Which of the following is NOT a primitive data type in Java?\",\n      \"options\": [\n        \"int\",\n        \"boolean\",\n        \"String\",\n        \"float\"\n      ],\n      \"correctAnswer\": \"String\"\n    },\n    {\n      \"question\": \"What is the purpose of the 'if' statement in Java?\",\n      \"options\": [\n        \"To repeat a block of code\",\n        \"To define a class\",\n        \"To execute a block of code based on a condition\",\n        \"To declare a variable\"\n      ],\n      \"correctAnswer\": \"To execute a block of code based on a condition\"\n    },\n    {\n      \"question\": \"Which of the following operators is used for assignment in Java?\",\n      \"options\": [\n        \"==\",\n        \"=\",\n        \"+\",\n        \"%\"\n      ],\n      \"correctAnswer\": \"=\"\n    },\n    {\n      \"question\": \"What is the index of the first element in an array in Java?\",\n      \"options\": [\n        \"1\",\n        \"0\",\n        \"-1\",\n        \"The array's length\"\n      ],\n      \"correctAnswer\": \"0\"\n    },\n    {\n      \"question\": \"Which keyword is used to define a class in Java?\",\n      \"options\": [\n        \"public\",\n        \"class\",\n        \"static\",\n        \"void\"\n      ],\n      \"correctAnswer\": \"class\"\n    },\n    {\n      \"question\": \"What is encapsulation in OOP?\",\n      \"options\": [\n        \"Hiding data and methods within a class\",\n        \"Creating multiple objects from the same class\",\n        \"Inheriting properties from another class\",\n        \"Breaking down a problem into smaller parts\"\n      ],\n      \"correctAnswer\": \"Hiding data and methods within a class\"\n    },\n    {\n      \"question\": \"What is the purpose of the 'main' method in a Java program?\",\n      \"options\": [\n        \"To declare variables\",\n        \"To define a class\",\n        \"To start the execution of the program\",\n        \"To print output to the console\"\n      ],\n      \"correctAnswer\": \"To start the execution of the program\"\n    },\n    {\n      \"question\": \"Which of the following methods is used to read input from the console in Java?\",\n      \"options\": [\n        \"System.out.println()\",\n        \"System.in.read()\",\n        \"Scanner.nextLine()\",\n        \"print()\"\n      ],\n      \"correctAnswer\": \"Scanner.nextLine()\"\n    },\n    {\n      \"question\": \"Which loop is guaranteed to execute at least once?\",\n      \"options\": [\n        \"for loop\",\n        \"while loop\",\n        \"do-while loop\",\n        \"if-else loop\"\n      ],\n      \"correctAnswer\": \"do-while loop\"\n    },\n    {\n      \"question\": \"What does the 'new' keyword do in Java?\",\n      \"options\": [\n        \"Declares a variable\",\n        \"Creates a new object\",\n        \"Defines a class\",\n        \"Calls a method\"\n      ],\n      \"correctAnswer\": \"Creates a new object\"\n    }\n  ]\n}\n```" },
       ],
     },
   ],

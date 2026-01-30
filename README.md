@@ -95,7 +95,7 @@ Ensure you have these tools and services set up:
    Create a `.env.local` file in the root and add:
 
    ```env
-   NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api
+   NEXT_CLERK_FRONTEND_API=your_clerk_frontend_api
    CLERK_API_KEY=your_clerk_api_key
    STRIPE_SECRET_KEY=your_stripe_secret_key
    NEON_DATABASE_URL=your_neon_database_url
